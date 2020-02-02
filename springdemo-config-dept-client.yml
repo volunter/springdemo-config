@@ -1,14 +1,14 @@
 ﻿spring:
   profiles:
     active:
-      - dev
+    - dev
 ---
 #端口号
 server:
-  profiles: dev
   port: 8081
   #应用名称
 spring:
+  profiles: dev
   application:
     name: springdemo-demo-8081
     #数据库配置
@@ -38,10 +38,10 @@ info:
 ---
 #端口号
 server:
-  profiles: test
   port: 8081
   #应用名称
 spring:
+  profiles: test
   application:
     name: springdemo-demo-8081
     #数据库配置
