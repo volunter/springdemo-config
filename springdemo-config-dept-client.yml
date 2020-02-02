@@ -1,0 +1,37 @@
+﻿spring:
+  profiles:
+    active:
+      - dev
+---
+#端口号
+server:
+  profiles: dev
+  port: 8081
+  #应用名称
+spring:
+  application:
+    name: springdemo-demo-8081
+    #数据库配置
+  datasource:
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      #配置mybatis
+mybatis:
+  type-aliases-package: com.hopu.entity
+  #注册eureka服务
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: microservicecloud-dept8081   #微服务在eureka中的显示名称
+    prefer-ip-address: true #左下角提示IP
+info:
+  app.name: zhangsan
