@@ -6,7 +6,6 @@
 #端口号
 server:
   port: 8081
-  #应用名称
 spring:
   profiles: dev
   application:
@@ -14,7 +13,7 @@ spring:
     #数据库配置
   datasource:
     driver-class-name: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://localhost:3306/test3
+    url: jdbc:mysql://localhost:3306/test
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
@@ -39,7 +38,6 @@ info:
 #端口号
 server:
   port: 8081
-  #应用名称
 spring:
   profiles: test
   application:
